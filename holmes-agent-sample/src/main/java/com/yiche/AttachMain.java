@@ -20,7 +20,7 @@ public class AttachMain {
           AgentInitializationException {
 
     // attach方法参数为目标应用程序的进程号
-    VirtualMachine vm = VirtualMachine.attach("18824");
+    VirtualMachine vm = VirtualMachine.attach("7136");
 
     try {
       // agent路径

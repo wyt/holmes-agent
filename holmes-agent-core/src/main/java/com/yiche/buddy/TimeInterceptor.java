@@ -24,7 +24,8 @@ public class TimeInterceptor {
       // 原有函数执行
       return callable.call();
     } finally {
-      System.out.println(method + ": took " + (System.currentTimeMillis() - start) + "ms");
+      System.out.println(
+          method.getName() + ": took " + (System.currentTimeMillis() - start) + "ms");
     }
   }
 }
