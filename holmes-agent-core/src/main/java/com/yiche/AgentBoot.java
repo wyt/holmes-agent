@@ -22,15 +22,13 @@ public class AgentBoot {
   }
 
   /**
-   * 动态 attach 方式启动，运行此方法
+   * 以Attach的方式载入，在Java程序启动后执行
    *
    * @param args
    * @param instrumentation
    */
   public static void agentmain(String args, Instrumentation instrumentation) {
 
-    System.out.println("java agent premain. args: " + args);
-    ClassLogger transformer = new ClassLogger();
-    instrumentation.addTransformer(transformer);
+    System.out.println("java agent agentmain. args: " + args);
   }
 }
