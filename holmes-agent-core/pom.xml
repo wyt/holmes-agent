@@ -36,7 +36,7 @@
                         <!-- config java agent manifest -->
                         <manifestEntries>
                             <Agent-Class>com.yiche.AgentBoot</Agent-Class>
-                            <Premain-Class>com.yiche.AgentBoot</Premain-Class>
+                            <Premain-Class>com.yiche.buddy.AgentBoot</Premain-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
@@ -55,6 +55,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
                     <artifactSet>
                         <includes>
                             <include>net.bytebuddy:byte-buddy:jar:</include>
