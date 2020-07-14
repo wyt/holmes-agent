@@ -25,7 +25,7 @@ public class TimeInterceptor {
       return callable.call();
     } finally {
       System.out.println(
-          method.getName() + ": took " + (System.currentTimeMillis() - start) + "ms");
+          "方法: " + method.getName() + ": 耗时 " + (System.currentTimeMillis() - start) + "ms");
     }
   }
 }

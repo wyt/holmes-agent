@@ -1,9 +1,6 @@
 package com.yiche;
 
 import java.lang.instrument.ClassFileTransformer;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.ProtectionDomain;
 
 /**
@@ -20,11 +17,9 @@ public class ClassLogger implements ClassFileTransformer {
       ProtectionDomain protectionDomain,
       byte[] classfileBuffer) {
     try {
-      Path path = Paths.get("classes/" + className + ".class");
-      System.out.println(path);
-      Files.write(path, classfileBuffer);
+      System.out.println(className);
     } catch (Throwable ignored) {
-      // ignored, don’t do this at home kids
+      ignored.printStackTrace();
     } finally {
       return classfileBuffer;
     }
